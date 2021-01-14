@@ -6,8 +6,8 @@ Feature: Test of page and the functions
   
   @tag1
   Scenario: I open page
-    Given I open page
+    Given "JuanP" open page
     When I chose option IFrames Test and then chose option Window Open Test       
     Then I verify correct open page 
     
-     
+       
