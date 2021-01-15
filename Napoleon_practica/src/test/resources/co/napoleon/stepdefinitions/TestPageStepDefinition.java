@@ -2,7 +2,7 @@ package co.napoleon.stepdefinitions;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.*;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isCurrentlyVisible;
 
 import co.napoleon.task.OpenTheBrowser;
 import co.napoleon.ui.HomePage;
@@ -24,7 +24,6 @@ public class TestPageStepDefinition {
         OnStage.setTheStage(new OnlineCast());
     }
 	
-	//tag1
 	
 	@Given("^\"([^\"]*)\" open page$")
 	public void openPage(String actor){
@@ -36,9 +35,9 @@ public class TestPageStepDefinition {
 	public void iChoseOptionIFramesTestAndThenChoseOptionWindowOpenTest() {
 		
 		theActorInTheSpotlight().attemptsTo(Click.on(LinksPage.IFRAME_LINK)
-				//,WaitUntil.the(LinksPage.TABLE_LINK, isCurrentlyVisible())
-				//,Scroll.to(LinksPage.TABLE_LINK)
-				,Click.on(LinksPage.TABLE_LINK));
+				,WaitUntil.the(LinksPage.TABLE_LINK, isCurrentlyVisible())
+				,Scroll.to(LinksPage.WINDOWS_OPEN_LINK)
+				,Click.on(LinksPage.WINDOWS_OPEN_LINK));
 				
 	    
 	}
